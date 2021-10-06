@@ -5,7 +5,7 @@ import { registerAction, registerFailureAction, registerSuccessAction } from "sr
 const initialState: AuthStateInterface = {
   isSubmitting: false,
   currentUser: null,
-  validationError: null,
+  validationErrors: null,
   isLoggedIn: null
 }
 
@@ -15,7 +15,7 @@ const authReducer = createReducer(
     (state): AuthStateInterface => ({
       ...state,
       isSubmitting: true,
-      validationError: null
+      validationErrors: null
     })
   ),
   on(registerSuccessAction,
@@ -30,7 +30,7 @@ const authReducer = createReducer(
     (state, action): AuthStateInterface => ({
       ...state,
       isSubmitting: false,
-      validationError: action.errors
+      validationErrors: action.errors
     })
   )
 )
