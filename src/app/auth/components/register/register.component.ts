@@ -14,7 +14,7 @@ import { BackendErrorInterface } from "src/app/shared/types/backendErrors.interf
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponet implements OnInit {
+export class RegisterComponent implements OnInit {
   form: FormGroup
   isSubmitting$: Observable<boolean>
   backendError$: Observable<BackendErrorInterface | null>

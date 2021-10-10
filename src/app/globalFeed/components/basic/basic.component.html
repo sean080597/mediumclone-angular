@@ -1,0 +1,14 @@
+<h1>Normal: {{ title }}</h1>
+<h1>Uppercase: {{ title | uppercase }}</h1>
+<h1>JSON: {{ jsonValue | json }}</h1>
+<h1>Date: {{ newDate | date: 'medium' }}</h1>
+<h1>Custom Truncate Pipe: {{ title | truncate }}</h1>
+<button (click)="handleClick()">Click me</button>
+
+<mc-basic-user [user]="user" (userEvent)="handleEvent($event)"></mc-basic-user>
+
+<ul *ngFor="let item of posts | async; let i = index">
+  <li>{{ i }}</li>
+  <li>{{ item.title }}</li>
+  <li>{{ item.body }}</li>
+</ul>

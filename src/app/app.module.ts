@@ -9,16 +9,18 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { AuthModule } from 'src/app/auth/auth.module'
 import { environment } from 'src/environments/environment'
+import { GlobalFeedModule } from 'src/app/globalFeed/globalFeed.module'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AuthModule,
+    GlobalFeedModule,
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
